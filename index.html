@@ -63,6 +63,7 @@ h1 {
     <h1>TIKITAKA OS - STORE</h1>
   </header>
   <main id="appList">
+    <p id="_note_">No apps for now,Send your app now by email the developer (esuper223@gmail.com)\n<strong>Email belike</strong>:\nHi,i want to publish my app!\nApp name:"App"\nVersion:"1"\nAuth:"my_corp"\nDescription:"description of my very own app!!"\nHere is my app file url!!:\nhttps://myappfile/file</p>
     <!-- App list will be dynamically generated here -->
   </main>
   <script>
@@ -71,6 +72,10 @@ h1 {
 fetch('https://65cd284bdd519126b8403144.mockapi.io/tikitaka/update/check/apps')
   .then(response => response.json())
   .then(apps => {
+    if(!(apps.length > 0))
+    {
+      document.getElementById("_note_").style.display = "none";
+    }
     apps.forEach(app => {
       const appCard = document.createElement('div');
       appCard.classList.add('app-card');
