@@ -72,7 +72,7 @@ h1 {
 fetch('https://65cd284bdd519126b8403144.mockapi.io/tikitaka/update/check/apps')
   .then(response => response.json())
   .then(apps => {
-    if(!(apps.length > 0))
+    if(apps.length > 0)
     {
       document.getElementById("_note_").style.display = "none";
     }
