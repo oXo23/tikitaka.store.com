@@ -76,6 +76,7 @@ fetch('https://65cd284bdd519126b8403144.mockapi.io/tikitaka/update/check/apps')
     {
       document.getElementById("_note_").style.display = "none";
     }
+    alert(apps.length);
     apps.forEach(app => {
       const appCard = document.createElement('div');
       appCard.classList.add('app-card');
