@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+p<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -63,7 +63,7 @@ h1 {
     <h1>TIKITAKA OS - STORE</h1>
   </header>
   <main id="appList">
-    <p id="_note_">No apps for now,Send your app now by email the developer (esuper223@gmail.com)</br><strong>Email belike</strong>:</br>Hi,i want to publish my app!</br>App name:"App"</br>Version:"1"</br>Auth:"my_corp"</br>Description:"description of my very own app!!"</br>Here is my app file url!!:</br>https://myappfile/file</p>
+    <p id="_note_"><strong>Send your app now by email the developer (esuper223@gmail.com)</br>Email belike</strong>:</br>Hi,i want to publish my app!</br>App name:"App"</br>Version:"1"</br>Auth:"my_corp"</br>Description:"description of my very own app!!"</br>Here is my app file url!!:</br>https://myappfile/file</p>
     <!-- App list will be dynamically generated here -->
   </main>
   <script>
@@ -72,11 +72,6 @@ h1 {
 fetch('https://65cd284bdd519126b8403144.mockapi.io/tikitaka/update/check/apps')
   .then(response => response.json())
   .then(apps => {
-    if(apps.length > 0)
-    {
-      document.getElementById("_note_").style.display = "none";
-    }
-    alert(apps.length);
     apps.forEach(app => {
       const appCard = document.createElement('div');
       appCard.classList.add('app-card');
